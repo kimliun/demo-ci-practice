@@ -24,5 +24,6 @@ jobs:
           cache: maven
 
       - name: Build with Maven
-        working-directory: ./demo
-        run: ./mvnw clean package -DskipTests
+        run: |
+          cd demo
+          ./mvnw clean package -DskipTests
